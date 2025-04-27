@@ -1,0 +1,109 @@
+body {
+    background-color: rgb(222, 235, 239);
+}
+@media (max-width: 768px){/*fix this*/
+    
+ .image-text img {
+        width: 100%; 
+        margin-right: 0;
+}
+    .text{
+    font-size: 1vw; 
+}
+}
+@media (min-width: 1200px) {
+    .text {
+        font-size: 2vw; /* Adjusts font size for large screens */
+    }
+}
+
+
+h1 {
+    color: rgb(109, 149, 169);
+    text-align: center;
+}
+.image-container {
+    position: relative;/*allows the overlay text to be positioned relative to this container.*/
+    width: 100%;
+    height: 700px; /* Adjust the height as the image size */
+    overflow: hidden;
+}
+.background-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This will make the image cover the area without distortion */
+     overflow: hidden;
+}
+.overlay-text {
+    position: absolute;/*ensures that the text is placed exactly over the image.*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /*the color of the text */
+    font-size: 2rem; 
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds some shadow to the text for better visibility */
+}
+
+/* Font style for elements with class "top" */
+.top {
+    text-align: center;
+    font-family: "Pacifico", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+.middle{
+    text-align: center;
+   
+    font-weight: normal;
+    font-size: 48px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.middle::after {
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    background-color: #c2a56d; /* Light golden color */
+    margin: 5px auto 0; /* Centers the line */
+    position: relative;
+    top: 3px; /* Adjusts the distance from the text to the line */
+}
+
+
+.flex-container {
+    display: flex;
+    flex-direction: column; /* Stack the image-text blocks vertically */
+    align-items: center; /* Center the content horizontally */
+}
+
+.image-text {
+    display: flex;
+    flex-direction: row; /* Align image and text horizontally */
+    align-items: center; /* Vertically center the content */
+    width: 80%; /* Adjust the width of the image-text block */
+    margin-bottom: 20px; /* Adds space between each image-text pair */
+}
+
+.image-text img {
+    width: 75%; /* Adjust image width to 50% of its container */
+    height: auto; /* Maintains the aspect ratio of the image */
+    margin-right: 20px; /* Adds space between the image and the text */
+}
+
+.text {
+    text-align: left; /* Align text to the left */
+    width: 50%; /* Adjust the width of the text to fit beside the image */
+}
+
+.bottom{
+    background-color: rgb(74, 180, 212);
+    padding: 20px; /* Adds some space inside the footer for a better look */
+    text-align: center;}
+.footerLink{
+    font-family: "Pacifico", cursive;  
+    color:white
+}
+
